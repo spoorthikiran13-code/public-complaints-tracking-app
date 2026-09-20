@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CivicTrack - Project Report & Technical Documentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      .card-box {
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+    @page {
+      size: A4;
+      margin: 1.6cm;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen">
+
+  <!-- Fixed Print Floating Bar -->
+  <div class="no-print fixed top-4 right-4 z-50 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md text-white px-4 py-2.5 rounded-2xl shadow-xl border border-slate-700">
+    <div class="text-xs font-semibold mr-2">
+      <span class="text-blue-400 font-bold">CivicTrack Report:</span> Ready to export
+    </div>
+    <button 
+      onclick="window.print()" 
+      class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition cursor-pointer shadow-md"
+    >
+      <i class="fa-solid fa-file-pdf text-sm"></i>
+      <span>Download / Save as PDF</span>
+    </button>
+  </div>
+
+  <div class="max-w-4xl mx-auto my-8 p-8 sm:p-12 bg-white rounded-3xl shadow-xl border border-slate-200/80">
+
+    <!-- Header & Title Cover Section -->
+    <header class="border-b-2 border-slate-900 pb-8 mb-8">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl font-black shadow-md">
+            <i class="fa-solid fa-city"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">CivicTrack</h1>
+            <p class="text-xs font-bold uppercase tracking-wider text-blue-700">AI-Powered Municipal Infrastructure & Dispatch System</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="inline-block bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold px-3 py-1 rounded-full mb-1">
+            Engineering Project Report
+          </span>
+          <p class="text-xs text-slate-500">Academic & Presentation Edition</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-slate-100 text-xs">
+        <div>
+          <span class="text-slate-400 block font-medium">Candidate / Author</span>
+          <strong class="text-slate-900 font-bold text-sm">Spoorthi Kiran</strong>
+        </div>
+        <div>
+          <span class="text-slate-400 block font-medium">System Domain</span>
+          <strong class="text-slate-900 font-semibold">Civic AI & Smart Cities</strong>
+        </div>
+        <div>
+          <span class="text-slate-400 block font-medium">Release Version</span>
+          <strong class="text-slate-900 font-semibold">v1.0.0 Production</strong>
+        </div>
+        <div>
+          <span class="text-slate-400 block font-medium">Status</span>
+          <strong class="text-emerald-700 font-bold flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span> Deployed & Verified
+          </strong>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1. Executive Summary -->
+    <section class="mb-10">
+      <h2 class="text-base font-black uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-3">
+        <span class="w-2 h-4 bg-blue-600 rounded-xs"></span>
+        1. Executive Summary & Problem Statement
+      </h2>
+      <p class="text-sm text-slate-700 leading-relaxed mb-3">
+        Municipal corporations and public works departments worldwide face severe operational bottlenecks: unorganized citizen complaints, slow multi-day triage, repeated duplicate reporting of the same pothole or fallen tree, and field crews losing connectivity in dead zones.
+      </p>
+      <p class="text-sm text-slate-700 leading-relaxed">
+        <strong>CivicTrack</strong> solves this by introducing an end-to-end intelligent dispatch platform. Utilizing an <strong>Autonomous AI Dispatch Agent</strong>, CivicTrack instantly extracts domain vocabulary from text and voice recordings, determines the exact responsible municipal bureau (Transportation, Electrical, Sanitation, Drainage), prevents duplicate work orders through geo-fenced spatial analysis, and guarantees uninterrupted field operations through an offline-first Progressive Web Architecture (PWA).
+      </p>
+    </section>
+
+    <!-- 2. System Architecture & Core Modules -->
+    <section class="mb-10">
+      <h2 class="text-base font-black uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-4">
+        <span class="w-2 h-4 bg-blue-600 rounded-xs"></span>
+        2. Core Innovations & Engineering Modules
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Module 1 -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 card-box">
+          <div class="w-8 h-8 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-3">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-950 mb-1.5">AI Department Auto-Routing</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Parses text transcripts and audio input using semantic keyword heuristics to match issues to specific divisions (e.g., Asphalt Milling, Lighting Grid, Sewerage Bureau) with SLA metrics (8h–48h).
+          </p>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 card-box">
+          <div class="w-8 h-8 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold mb-3">
+            <i class="fa-solid fa-clone"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-950 mb-1.5">Duplicate Prevention Radar</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Evaluates category affinity, Haversine GPS proximity (150m–350m), ward jurisdiction, and lexical similarity. Blocks redundant ticket generation and merges citizen evidence into existing active tickets.
+          </p>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 card-box">
+          <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-3">
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          <h3 class="text-sm font-bold text-slate-950 mb-1.5">Offline-First Service Worker</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Features background IndexedDB outbox queuing and service worker caching. Reports recorded in low-reception areas are auto-synchronized and validated as soon as connectivity resumes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break for Clean Print Formatting -->
+    <div class="page-break"></div>
+
+    <!-- 3. AI Dispatch & Department Hierarchy Matrix -->
+    <section class="mb-10 pt-4">
+      <h2 class="text-base font-black uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-3">
+        <span class="w-2 h-4 bg-blue-600 rounded-xs"></span>
+        3. Municipal Department Routing Specification
+      </h2>
+      <p class="text-xs text-slate-600 mb-4">
+        Below is the municipal mapping matrix configured within the AI Dispatch Engine:
+      </p>
+
+      <div class="overflow-x-auto border border-slate-200 rounded-2xl card-box">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-900 font-bold border-b border-slate-200">
+              <th class="p-3">Category</th>
+              <th class="p-3">Department Code</th>
+              <th class="p-3">Assigned Municipal Authority</th>
+              <th class="p-3">Target SLA</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-700">
+            <tr>
+              <td class="p-3 font-semibold text-slate-900">Roads & Potholes</td>
+              <td class="p-3 font-mono font-bold text-blue-700">DEPT-TRANS-01</td>
+              <td class="p-3">Dept. of Transportation & Highways (Pavement Engineering)</td>
+              <td class="p-3 font-bold text-emerald-700">24 Hours</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold text-slate-900">Street Lighting</td>
+              <td class="p-3 font-mono font-bold text-blue-700">DEPT-ELEC-02</td>
+              <td class="p-3">Bureau of Street Lighting & High-Voltage Grid Unit</td>
+              <td class="p-3 font-bold text-emerald-700">24 Hours</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold text-slate-900">Water & Sewage</td>
+              <td class="p-3 font-mono font-bold text-blue-700">DEPT-WATER-03</td>
+              <td class="p-3">Municipal Water, Drainage & Sewer Authority</td>
+              <td class="p-3 font-bold text-rose-700">12 Hours</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold text-slate-900">Waste & Sanitation</td>
+              <td class="p-3 font-mono font-bold text-blue-700">DEPT-WASTE-04</td>
+              <td class="p-3">Dept. of Public Sanitation & Waste Management</td>
+              <td class="p-3 font-bold text-emerald-700">24 Hours</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold text-slate-900">Traffic & Signals</td>
+              <td class="p-3 font-mono font-bold text-blue-700">DEPT-TRAF-05</td>
+              <td class="p-3">Traffic Operations & Intelligent Transit Systems</td>
+              <td class="p-3 font-bold text-rose-700">8 Hours</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold text-slate-900">Parks & Fallen Trees</td>
+              <td class="p-3 font-mono font-bold text-blue-700">DEPT-PARK-06</td>
+              <td class="p-3">Dept. of Parks, Urban Forestry & Public Grounds</td>
+              <td class="p-3 font-bold text-slate-700">36 Hours</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. Duplicate Prevention Algorithm -->
+    <section class="mb-10">
+      <h2 class="text-base font-black uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-3">
+        <span class="w-2 h-4 bg-blue-600 rounded-xs"></span>
+        4. Multi-Factor Duplicate Prevention Logic
+      </h2>
+      <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 card-box space-y-3 text-xs text-slate-700 leading-relaxed">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">1. Category & Jurisdiction (60%)</span>
+            Strictly matches exact hazard type (e.g. Street Light) and geographic Ward boundary.
+          </div>
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">2. Spatial Proximity (25%)</span>
+            Calculates distance using Haversine formula between reported GPS markers. Threshold &le; 150m grants full boost.
+          </div>
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">3. Token Street Matching (25%)</span>
+            Strips out common stop-words and isolates street names, avenues, and landmarks.
+          </div>
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="font-bold text-slate-900 block mb-1">4. Policy Outcome</span>
+            If composite score &ge; 55%, the ticket is flagged as duplicate. Creation of a new work order is blocked; citizen evidence is merged.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Technology Stack & Implementation Details -->
+    <section class="mb-10">
+      <h2 class="text-base font-black uppercase tracking-wider text-slate-900 flex items-center gap-2 mb-3">
+        <span class="w-2 h-4 bg-blue-600 rounded-xs"></span>
+        5. Technical Stack
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl card-box">
+          <strong class="text-slate-900 block">Frontend</strong>
+          <span class="text-slate-600">React 19, TypeScript</span>
+        </div>
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl card-box">
+          <strong class="text-slate-900 block">Styling & UI</strong>
+          <span class="text-slate-600">Tailwind CSS, Lucide Icons</span>
+        </div>
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl card-box">
+          <strong class="text-slate-900 block">Persistence</strong>
+          <span class="text-slate-600">IndexedDB, LocalStorage</span>
+        </div>
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl card-box">
+          <strong class="text-slate-900 block">Build System</strong>
+          <span class="text-slate-600">Vite 8 & ESM Bundling</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Verification & Sign-off Footer -->
+    <footer class="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        <span>Project: <strong>CivicTrack Municipal System</strong></span> • Author: <strong>Spoorthi Kiran</strong>
+      </div>
+      <div class="font-mono text-[11px] text-blue-700">
+        Demo: https://spoorthikiran13.github.io/civictrack/
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

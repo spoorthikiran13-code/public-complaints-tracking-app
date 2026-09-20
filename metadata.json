@@ -1,0 +1,12 @@
+{
+  "name": "Public Complaints Tracking App",
+  "description": "Real-time civic complaints tracker and infrastructure issue reporting platform with photo uploads, centralized status progress, and interactive resolution monitoring.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
