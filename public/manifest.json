@@ -1,6 +1,6 @@
 {
   "id": "/",
-  "name": "Public Complaints Tracking App",
+  "name": "CivicTrack - Municipal Infrastructure & Dispatch System",
   "short_name": "CivicTrack",
   "description": "Report municipal and infrastructure issues offline or online with real-time status tracking.",
   "start_url": "/",

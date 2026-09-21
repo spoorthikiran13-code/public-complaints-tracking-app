@@ -579,7 +579,7 @@ function ComplaintsAppContent() {
             <div className="w-6 h-6 rounded-lg bg-blue-600 text-white flex items-center justify-center text-xs font-bold">
               C
             </div>
-            <span>Public Complaints Tracking Portal • City Infrastructure Resolution Desk</span>
+            <span>CivicTrack • City Infrastructure & Municipal Dispatch Desk</span>
           </div>
 
           <div className="flex items-center gap-4">

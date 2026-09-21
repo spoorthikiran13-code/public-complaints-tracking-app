@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight leading-none">
-                  Public Complaints Tracking App
+                  CivicTrack
                 </h1>
                 <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
                   MUNICIPAL DEMO

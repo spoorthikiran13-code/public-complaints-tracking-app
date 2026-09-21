@@ -458,11 +458,12 @@ async function generateReportPDF() {
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  // Write both names for easy access
+  // Write names for easy access
   fs.writeFileSync(path.join(publicDir, 'CivicTrack_Project_Documentation.pdf'), pdfBytes);
   fs.writeFileSync(path.join(publicDir, 'index.pdf'), pdfBytes);
+  fs.writeFileSync(path.join(publicDir, 'code.pdf'), pdfBytes);
 
-  console.log('PDF successfully generated in /public/CivicTrack_Project_Documentation.pdf and /public/index.pdf');
+  console.log('PDF successfully generated in /public/CivicTrack_Project_Documentation.pdf, /public/index.pdf, and /public/code.pdf');
 }
 
 generateReportPDF().catch(err => {

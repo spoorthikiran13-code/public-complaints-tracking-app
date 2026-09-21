@@ -68,7 +68,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               <h3 className="text-base font-bold text-slate-900">
                 {mode === 'signin' ? 'Secure Citizen Authentication' : 'Create Resident Account'}
               </h3>
-              <p className="text-xs text-slate-500">Public Complaints Tracking Portal</p>
+              <p className="text-xs text-slate-500">CivicTrack Municipal Infrastructure Portal</p>
             </div>
           </div>
           <button

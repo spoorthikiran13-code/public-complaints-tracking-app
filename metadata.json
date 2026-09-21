@@ -1,6 +1,6 @@
 {
-  "name": "Public Complaints Tracking App",
-  "description": "Real-time civic complaints tracker and infrastructure issue reporting platform with photo uploads, centralized status progress, and interactive resolution monitoring.",
+  "name": "CivicTrack",
+  "description": "CivicTrack: AI-Powered Municipal Infrastructure Reporting, Intelligent Department Routing & Duplicate Prevention Radar.",
   "requestFramePermissions": [
     "camera",
     "geolocation",
